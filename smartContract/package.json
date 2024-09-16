@@ -1,8 +1,24 @@
 {
   "dependencies": {
-    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
     "@openzeppelin/contracts": "^5.0.2",
-    "ethers": "^6.13.2",
-    "hardhat": "^2.22.10"
-  }
+    "ethers": "^6.13.2"
+  },
+  "name": "smartcontract",
+  "version": "1.0.0",
+  "description": "mint tokenERC20\r mint tokenERC721 with tokenId + tokenUri\r sale token: \r   + users can buy token with ETHs\r   + only owner can withdraw ETH from contract",
+  "main": "hardhat.config.js",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "hardhat": "^2.22.10",
+    "mocha": "^10.7.3"
+  },
+  "scripts": {
+    "contract:compile": "npx hardhat compile",
+    "contract:test": "npx hardhat test",
+    "contract:deploy": "npx hardhat run scripts/deploy.js --network tBNB",
+    "contract:verify": "node scripts/verify.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
 }
